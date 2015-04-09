@@ -1,0 +1,57 @@
+name = Materialize
+description = A front-end theme for Backdrop CMS based on Materialize/Material UI from Google
+version = BACKDROP_VERSION
+backdrop = 1.x
+
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/colors.css
+stylesheets[all][] = css/materialize.min.css
+stylesheets[all][] = css/ghpages-materialize.css
+stylesheets[all][] = css/prism.css
+stylesheets[print][] = css/print.css
+
+scripts[] = js/materialize.min.js
+scripts[] = js/animation.js
+scripts[] = js/buttons.js
+scripts[] = js/cards.js
+scripts[] = js/character_counter.js
+
+scripts[] = js/collapsible.js
+scripts[] = js/date_picker/picker.date.js
+scripts[] = js/date_picker/picker.js
+
+scripts[] = js/dropdown.js
+scripts[] = js/forms.js
+scripts[] = js/hammer.min.js
+scripts[] = js/jquery.easing.1.3.js
+
+scripts[] = js/jquery.hammer.js
+scripts[] = js/jquery.timeago.min.js
+scripts[] = js/leanModal.js
+scripts[] = js/materialbox.js
+
+scripts[] = js/parallax.js
+scripts[] = js/prism.js
+scripts[] = js/pushpin.js
+scripts[] = js/scrollFire.js
+
+scripts[] = js/scrollspy.js
+scripts[] = js/sideNav.js
+scripts[] = js/slider.js
+scripts[] = js/tabs.js
+
+scripts[] = js/toasts.js
+scripts[] = js/tooltip.js
+scripts[] = js/transitions.js
+scripts[] = js/velocity.min.js
+
+scripts[] = js/waves.js
+
+scripts[] = js/scripts.js
+breakpoints[all] = (min-width: 0em)
+breakpoints[small] = (min-width: 35em)
+breakpoints[large] = (min-width: 55em)
+
+; We need at least one setting for the theme settings page to appear in the
+; menu. Color module provides our defaults, so we just register a dummy setting.
+settings[color] = true
