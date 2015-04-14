@@ -4,10 +4,6 @@ version = BACKDROP_VERSION
 backdrop = 1.x
 
 stylesheets[all][] = css/style.css
-stylesheets[all][] = css/colors.css
-stylesheets[all][] = css/materialize.min.css
-stylesheets[all][] = css/ghpages-materialize.css
-stylesheets[all][] = css/prism.css
 stylesheets[print][] = css/print.css
 
 scripts[] = js/materialize.min.js
