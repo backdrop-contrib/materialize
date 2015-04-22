@@ -11,7 +11,12 @@ body {
 .comment .comment-arrow {
   border-color: $button-color-flat;
 }
-.l-container,
+
+.l-container
+{
+background: #fff;
+}
+
 .l-header ul.menu li a.active,
 .l-header ul.menu li.active-trail a {
   background: $button-color-flat;
@@ -25,7 +30,7 @@ body {
 }
 
 
-a { 
+a {
   color: $success-color;
 }
 a:hover,

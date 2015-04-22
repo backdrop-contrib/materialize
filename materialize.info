@@ -2,6 +2,7 @@ name = Materialize
 description = A front-end theme for Backdrop CMS based on Materialize/Material UI from Google
 version = BACKDROP_VERSION
 backdrop = 1.x
+type = theme
 
 stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css

@@ -11,11 +11,14 @@ CONTENTS OF THIS FILE
  - Requirements
  - Installation
  - Coming From Drupal?
+ - Casual Usage
+ - Advanced Usage
  - File Structure
  - Usage
  - SASS
  - Questions
  - License
+ - Credits
  - Maintainers
 
 INTRODUCTION
@@ -44,7 +47,7 @@ This theme has been manually tested successfully creating and viewing nodes and 
 KNOWN ISSUES
 ---------------------
 
-NOTE -- this theme is in a heavy dev state and licenses are being discussed.  It may vanish tomorrow because of incompatible software licenses.  If you have spare time and shared ideas on how to propel it forward legally, you are welcome to join in and offer advice or build it together.
+NOTE -- this theme is in a heavy development state.  If you have spare time and shared ideas on how to propel it forward coding cleanly and under the appropriate licenses, you are welcome to join in and offer advice or build it together.
 
 This theme works as is by just installing it.
 
@@ -61,14 +64,21 @@ This theme is based on of Xtheme for Drupal. <https://www.drupal.org/project/xth
 Special thanks to <https://www.drupal.org/u/frankbaele> for this great work!
 
 This theme uses the Materialize front end framework from <http://materializecss.com/about.html>. Thanks to them for this adaption!
+
+This theme uses Google's Material Design philosophy.
 Special thanks to the developers at Google for the design basis of this theme.
 
 You may extend this theme with the documentation/classes from <http://materializecss.com/>
 
 This theme contains many files -- all the files from the Materialize distribution.  You may use what you need and disregard the rest.
-This theme is using a minimum now and you are free to look in the theme files and adapt what you see to what you desire for your site.
+You are free to look in the theme files and adapt what you see to what you desire for your site.
 
 "Created and designed by Google, Material Design is a design language that combines the classic principles of successful design along with innovation and technology. Google's goal is to develop a system of design that allows for a unified user experience across all their products on any platform."
+
+This theme can use the Bourbon/Neat SASS extensions from thoughtbot.
+Bourbon is maintained and funded by thoughtbot, inc. Tweet your questions or suggestions to @bourbonsass and while you’re at it follow us too.
+
+Copyright © 2011–2015 thoughtbot, inc. Bourbon is free software, and may be redistributed under the terms specified in the license.
 
 REQUIREMENTS
 ------------
@@ -85,6 +95,19 @@ COMING FROM DRUPAL?
 -------------------
 
 If you are using Backdrop and have a previous knowledge of Drupal, you will notice that Drupal themes spend a lot of template files and CSS arranging things on the page where this theme doesn't so much.  This theme is more of a style guide of how page elements are supposed to look and not much layout.  It relies on the layouts module.
+
+This theme does not use the Material Design or Bootstrap grid by default.  It uses the default layouts module until layouts in Backdrop become more defined.
+
+CASUAL USAGE
+------------------
+
+If you would like to use CSS instead of SASS, edit the css/style.css file to alter the appearence of your website.
+Place your CSS at the bottom of the file.
+
+If you would like to add custom Javascript to your site, edit the js/materialize_custom.js file.
+
+ADVANCED USAGE
+------------------
 
 FILE STRUCTURE
 ------------------
@@ -108,11 +131,6 @@ COMPONENTS folder
 _custom.scss
 -- custom.scss contains the custom code on top of your SASS theme
 
-
-USAGE
------
-
-If you would like to use CSS instead of SASS, edit the css/style.css file to alter the appearence of your website.
 
 
 SASS
