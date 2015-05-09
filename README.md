@@ -25,18 +25,15 @@ INTRODUCTION
 ------------
 
 Materialize is a "pretty" theme for something nice for desktop sites out of the box.
-It may not be a good, plain base theme.  It uses:
+It is pretty heavy and may not be a good, plain base theme.  It uses:
 
 - default Backdrop layouts
 - some Bartik default CSS
-- the Color module UI for changing theme colors
 - Materialize CSS framework based on Google Material Design for a more beautiful site
 - custom CSS form elements for easier mobile usage
 - a single CSS file OR
 - SASS stylesheets using libSASS and Grunt for workflow
 - a mobile-friendly menu built in
-
-"This theme differentiates itself by its simplicity and structure. It does not incorporate a great list of features but rather embodies a frontend workflow. Many of the existing themes are bloated with features and overwrites. We do not want to rewrite output, just makes it easier to develop a theme in a structured way."
 
 TESTED
 -----
@@ -56,6 +53,10 @@ If it bothers you that we don't use the Libraries module, file an issue and we c
 When official information on using third-party frameworks becomes known, this will follow it.
 
 This theme is in the process of retro-fitting its CSS into SASS.
+
+This theme has a lot of functionality and widget type add-ons bundled in that are not actively integrated yet.
+You can look through the folders and manually integrate what you need, or delete what you don't.
+In time, we will get around to integrating this as well.  Thank you for your patience.
 
 SPECIAL THANKS
 --------------

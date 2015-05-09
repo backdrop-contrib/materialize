@@ -1,46 +1,20 @@
+/**
+ * Style file
+ *
+ * This file is compiled into style.css
+todo  
+@import "bourbon";
+@import "neat";
+@import 'base/variables';
 
-/* ---------- General Layout ---------- */
+@import 'base/normalize';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/extendables';
+@import 'base/typography';
+@import 'design/layout';
 
-body,
-input,
-textarea,
-select {
-  color: #000;
-  background: none;
-}
-body.two-sidebars,
-body.sidebar-first,
-body.sidebar-second,
-body {
-  width: 640px;
-}
-#sidebar-first,
-#sidebar-second,
-.navigation,
-#admin_menu,
-#footer-wrapper,
-.tabs,
-.add-or-remove-shortcuts {
+.sidebar{
   display: none;
 }
-.one-sidebar #content,
-.two-sidebars #content {
-  width: 100%;
-}
-#triptych-wrapper {
-  width: 960px;
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-#triptych-first, #triptych-middle, #triptych-last {
-  width: 250px;
-}
-
-/* ---------- Node Pages ---------- */
-
-#comments .title,
-#comments form,
-.comment-forbidden {
-  display: none;
-}
+*/

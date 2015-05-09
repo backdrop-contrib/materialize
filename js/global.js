@@ -1,4 +1,4 @@
-var Materialize = {};
+Materialize = {};
 
 // Unique ID
 Materialize.guid = (function() {
@@ -24,8 +24,13 @@ Materialize.elementOrParentIsFixed = function(element) {
         }
     });
     return isFixed;
-}
+};
 
 // Velocity has conflicts when loaded with jQuery, this will check for it
 var Vel;
-if ($) { Vel = $.Velocity } else { Vel = Velocity};
+if ($) {
+  Vel = $.Velocity;
+}
+else {
+  Vel = Velocity;
+}
