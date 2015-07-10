@@ -24,16 +24,30 @@ CONTENTS OF THIS FILE
 INTRODUCTION
 ------------
 
-Materialize is a "pretty" theme for something nice for desktop sites out of the box.
+Materialize is a "pretty" theme for something nice for websites out of the box.
 It is pretty heavy and may not be a good, plain base theme.  It uses:
 
 - default Backdrop layouts
-- some Bartik default CSS
-- Materialize CSS framework based on Google Material Design for a more beautiful site
-- custom CSS form elements for easier mobile usage
-- a single CSS file OR
+- Materialize CSS framework based on Google Material Design for that Android/GMail look
+
+- a single CSS file for casual web developers OR
 - SASS stylesheets using libSASS and Grunt for workflow
+
+- settings page for serve local style/script files OR
+- serve style/script files from Cloudflare CDN
+
+- settings page to manually select which Javascript files/components you want to use OR
+- you can dig into the code to use .info files and SASS imports instead
+
 - a mobile-friendly menu built in
+- custom CSS form elements for easier mobile usage
+- through SASS and grunt watch, this theme enables LiveReload which automatically refreshes the page you are working on whenever you
+make a CSS, SASS or Javascript alteration and save.  It is basically the same speed of development as directly typing CSS declarations into the browser using something like Firebug or Devtools.
+
+- (disabled by default/not tested yet) Bourbon SASS mixins
+- (disabled by default/not tested yet) the Color module UI for changing theme colors
+
+"Created and designed by Google, Material Design is a design language that combines the classic principles of successful design along with innovation and technology."  Implemented by a team of students from Carnegie Mellon University.
 
 TESTED
 -----
@@ -48,15 +62,13 @@ NOTE -- this theme is in a heavy development state.  If you have spare time and 
 
 This theme works as is by just installing it.
 
-If it bothers you that we don't use the Libraries module, file an issue and we can try to change it.
-
-When official information on using third-party frameworks becomes known, this will follow it.
-
 This theme is in the process of retro-fitting its CSS into SASS.
 
 This theme has a lot of functionality and widget type add-ons bundled in that are not actively integrated yet.
 You can look through the folders and manually integrate what you need, or delete what you don't.
 In time, we will get around to integrating this as well.  Thank you for your patience.
+
+The next item on the agenda for this theme is to integrate Grunt Uncss cleanly into the build process, and decide if theme components like modals should use template.php + theme settings or if they should each be add-on modules.
 
 SPECIAL THANKS
 --------------
@@ -73,8 +85,6 @@ You may extend this theme with the documentation/classes from <http://materializ
 
 This theme contains many files -- all the files from the Materialize distribution.  You may use what you need and disregard the rest.
 You are free to look in the theme files and adapt what you see to what you desire for your site.
-
-"Created and designed by Google, Material Design is a design language that combines the classic principles of successful design along with innovation and technology. Google's goal is to develop a system of design that allows for a unified user experience across all their products on any platform."
 
 This theme can use the Bourbon/Neat SASS extensions from thoughtbot.
 Bourbon is maintained and funded by thoughtbot, inc. Tweet your questions or suggestions to @bourbonsass and while you’re at it follow us too.

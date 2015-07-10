@@ -1,5 +1,18 @@
 <?php
 
+/*
+ * Initialize theme settings
+ */
+// if (is_null(theme_get_setting('materialize_script1'))) {
+  // Save default theme settings.
+//   config_set('materialize.settings', 'materialize_script1', '');
+
+  // Force refresh of Backdrop internals.
+//   theme_get_setting('', TRUE);
+// }
+
+
+
 /**
  * Implements hook_preprocess_maintenance_page().
  */
@@ -77,3 +90,179 @@ $variables['element']['#attributes']['class'] = array_merge($variables['element'
 return '<select' . backdrop_attributes($variables['element']['#attributes']) . '>' . form_select_options($variables['element']) . '</select>';
 }
 
+function materialize_image_style($variables) {
+
+if (isset($variables['attributes']['class'])) {
+    $variables['attributes']['class'] = array_merge($variables['attributes']['class'], array('responsive-img'));
+  }else{
+    $variables['attributes']['class'] = array('responsive-img', $variables['style_name']);
+  }
+
+return theme('image', $variables);
+}
+
+function materialize_breadcrumb($variables) {
+
+if (theme_get_setting('materialize_cdn') > 0)
+{
+backdrop_add_css('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css', array('every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_css('themes/materialize/css/style.css', array('every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("themes/materialize/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+else
+{
+backdrop_add_css("themes/materialize/css/style.css", array('every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("themes/materialize/js/materialize.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("themes/materialize/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+
+if (theme_get_setting('materialize_script1') > 0)
+{
+backdrop_add_js("themes/materialize/js/animation.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script2') > 0)
+{
+backdrop_add_js("themes/materialize/js/buttons.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script3') > 0)
+{
+backdrop_add_js("themes/materialize/js/cards.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script4') > 0)
+{
+backdrop_add_js("themes/materialize/js/character_counter.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script5') > 0)
+{
+backdrop_add_js("themes/materialize/js/collapsible.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script6') > 0)
+{
+backdrop_add_js("themes/materialize/js/date_picker/picker.date.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script7') > 0)
+{
+backdrop_add_js("themes/materialize/js/date_picker/picker.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script8') > 0)
+{
+backdrop_add_js("themes/materialize/js/dropdown.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script9') > 0)
+{
+backdrop_add_js("themes/materialize/js/forms.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script10') > 0)
+{
+backdrop_add_js("themes/materialize/js/hammer.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script11') > 0)
+{
+backdrop_add_js("themes/materialize/js/jquery.easing.1.3.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script12') > 0)
+{
+backdrop_add_js("themes/materialize/js/jquery.hammer.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script13') > 0)
+{
+backdrop_add_js("themes/materialize/js/jquery.timeago.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script14') > 0)
+{
+backdrop_add_js("themes/materialize/js/leanModal.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script15') > 0)
+{
+backdrop_add_js("themes/materialize/js/materialbox.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script16') > 0)
+{
+backdrop_add_js("themes/materialize/js/parallax.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script17') > 0)
+{
+backdrop_add_js("themes/materialize/js/prism.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script18') > 0)
+{
+backdrop_add_js("themes/materialize/js/pushpin.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script19') > 0)
+{
+backdrop_add_js("themes/materialize/js/scrollFire.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script20') > 0)
+{
+backdrop_add_js("themes/materialize/js/scrollspy.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script21') > 0)
+{
+backdrop_add_js("themes/materialize/js/sideNav.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script22') > 0)
+{
+backdrop_add_js("themes/materialize/js/slider.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script23') > 0)
+{
+backdrop_add_js("themes/materialize/js/tabs.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script24') > 0)
+{
+backdrop_add_js("themes/materialize/js/toasts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script25') > 0)
+{
+backdrop_add_js("themes/materialize/js/tooltip.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script26') > 0)
+{
+backdrop_add_js("themes/materialize/js/transitions.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script27') > 0)
+{
+backdrop_add_js("themes/materialize/js/velocity.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script28') > 0)
+{
+backdrop_add_js("themes/materialize/js/waves.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script29') > 0)
+{
+backdrop_add_js("themes/materialize/js/materialize_custom.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+backdrop_add_js("document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')", array('type' => 'inline', 'scope' => 'footer', 'weight' => 9999));
+
+}

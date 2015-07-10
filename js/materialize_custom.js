@@ -7,10 +7,19 @@
   // Show dropdown on hover.
   Backdrop.behaviors.materialize_select = {
     attach: function(context, setting) {
-    alert("hi");
-var thing = $('.form-select');
-console.log(thing);
+
+$('.l-content').css('opacity', '.1');
+Materialize.fadeInImage('.l-content');
 $('.form-select').addClass('browser-default');
+
+if (screen.width > 599)
+{
+$('.node.view-mode-teaser').addClass('card-panel hoverable');
+}
+
+$('p').addClass('flow-text');
+$('footer').addClass('page-footer');
+$('input').addClass('validate');
     }
   }
 

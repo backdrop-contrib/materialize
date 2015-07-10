@@ -101,11 +101,21 @@
     var text_area_selector = '.materialize-textarea';
 
     function textareaAutoResize($textarea) {
-      // Set fontsize of hiddenDiv
+      // Set font properties of hiddenDiv
+
+      var fontFamily = $textarea.css('font-family');
       var fontSize = $textarea.css('font-size');
-      if (fontSize) {
-        hiddenDiv.css('font-size', fontSize);
+
+      if (fontSize) { hiddenDiv.css('font-size', fontSize); }
+      if (fontFamily) { hiddenDiv.css('font-family', fontFamily); }
+
+      if ($textarea.attr('wrap') === "off") {
+        hiddenDiv.css('overflow-wrap', "normal")
+                 .css('white-space', "pre");
       }
+
+
+
 
       hiddenDiv.text($textarea.val() + '\n');
       var content = hiddenDiv.html().replace(/\n/g, '<br>');
@@ -132,7 +142,7 @@
       }
     });
 
-    $('body').on('keyup keydown', text_area_selector, function () {
+    $('body').on('keyup keydown autoresize', text_area_selector, function () {
       textareaAutoResize($(this));
     });
 
@@ -141,7 +151,12 @@
     $('.file-field').each(function() {
       var path_input = $(this).find('input.file-path');
       $(this).find('input[type="file"]').change(function () {
-        path_input.val($(this)[0].files[0].name);
+        var files = $(this)[0].files;
+        var file_names = [];
+        for (var i=0; i < files.length; i++) {
+          file_names.push(files[i].name);
+        }
+        path_input.val(file_names.join(", "));
         path_input.trigger('change');
       });
     });
@@ -233,9 +248,8 @@
           left = width;
         }
         thumb.addClass('active').css('left', left);
-
+        thumb.find('.value').html(thumb.siblings(range_type).val());
       }
-
     });
 
     $(document).on('mouseout touchleave', range_wrapper, function() {
@@ -267,7 +281,7 @@
       // Tear down structure if Select needs to be rebuilt
       var lastID = $select.data('select-id');
       if (lastID) {
-        $select.parent().find('i').remove();
+        $select.parent().find('span.caret').remove();
         $select.parent().find('input').remove();
 
         $select.unwrap();
@@ -321,7 +335,7 @@
       // Wrap Elements
       $select.wrap(wrapper);
       // Add Select Display Element
-      var dropdownIcon = $('<i class="mdi-navigation-arrow-drop-down"></i>');
+      var dropdownIcon = $('<span class="caret">&#9660;</span>');
       if ( $select.is(':disabled') )
         dropdownIcon.addClass('disabled');
 

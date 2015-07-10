@@ -1,6 +1,6 @@
 module.exports = function (grunt) {
   "use strict";
-  var neat = require('node-neat').includePaths;
+//  var neat = require('node-neat').includePaths;
   // Config...
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -24,7 +24,7 @@ module.exports = function (grunt) {
           livereload:true
         },
         files:[
-          './css/**/*.css',
+          './js/**/*.js', './css/*.css', './sass/**/*.scss'
         ]
       }
     },
@@ -50,7 +50,7 @@ module.exports = function (grunt) {
     },
     sass: {
       options: {
-        includePaths: neat
+//        includePaths: neat
       },
       prod: {
         options: {
@@ -58,8 +58,8 @@ module.exports = function (grunt) {
         },
         files: {
           './css/style.css': './sass/style.scss',
-          './css/print.css': './sass/print.scss',
-          './css/wysiwyg.css': './sass/wysiwyg.scss'
+//          './css/print.css': './sass/print.scss',
+//        './css/wysiwyg.css': './sass/wysiwyg.scss'
         }
       },
       dev: {
@@ -68,8 +68,8 @@ module.exports = function (grunt) {
         },
         files: {
           './css/style.css': './sass/style.scss',
-          './css/print.css': './sass/print.scss',
-          './css/wysiwyg.css': './sass/wysiwyg.scss'
+//          './css/print.css': './sass/print.scss',
+//        './css/wysiwyg.css': './sass/wysiwyg.scss'
         }
       }
     }

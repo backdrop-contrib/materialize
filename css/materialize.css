@@ -1,3 +1,8 @@
+/*!
+ * Materialize v0.97.0 (http://materializecss.com)
+ * Copyright 2014-2015 Materialize
+ * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
+ */
 .materialize-red.lighten-5 {
   background-color: #fdeaeb !important; }
 
@@ -2191,13 +2196,13 @@ table {
     background-color: #f2f2f2; }
   table.striped > tbody > tr > td {
     border-radius: 0px; }
-  table.highlight > tbody > tr {
+  table.hoverable > tbody > tr {
     -webkit-transition: background-color .25s ease;
     -moz-transition: background-color .25s ease;
     -o-transition: background-color .25s ease;
     -ms-transition: background-color .25s ease;
     transition: background-color .25s ease; }
-    table.highlight > tbody > tr:hover {
+    table.hoverable > tbody > tr:hover {
       background-color: #f2f2f2; }
   table.centered thead tr th, table.centered tbody tr td {
     text-align: center; }
@@ -5354,17 +5359,17 @@ nav {
 
 @font-face {
   font-family: "Roboto";
-  src: local(Roboto Thin), url("../font/roboto/Roboto-Thin.woff2") format("woff2"), url("../font/roboto/Roboto-Thin.woff") format("woff"), url("../font/roboto/Roboto-Thin.ttf") format("truetype");
+  src: url("../font/roboto/Roboto-Thin.woff2") format("woff2"), url("../font/roboto/Roboto-Thin.woff") format("woff"), url("../font/roboto/Roboto-Thin.ttf") format("truetype");
   font-weight: 200; }
 
 @font-face {
   font-family: "Roboto";
-  src: local(Roboto Light), url("../font/roboto/Roboto-Light.woff2") format("woff2"), url("../font/roboto/Roboto-Light.woff") format("woff"), url("../font/roboto/Roboto-Light.ttf") format("truetype");
+  src: url("../font/roboto/Roboto-Light.woff2") format("woff2"), url("../font/roboto/Roboto-Light.woff") format("woff"), url("../font/roboto/Roboto-Light.ttf") format("truetype");
   font-weight: 300; }
 
 @font-face {
   font-family: "Roboto";
-  src: local(Roboto Regular), url("../font/roboto/Roboto-Regular.woff2") format("woff2"), url("../font/roboto/Roboto-Regular.woff") format("woff"), url("../font/roboto/Roboto-Regular.ttf") format("truetype");
+  src: url("../font/roboto/Roboto-Regular.woff2") format("woff2"), url("../font/roboto/Roboto-Regular.woff") format("woff"), url("../font/roboto/Roboto-Regular.ttf") format("truetype");
   font-weight: 400; }
 
 @font-face {
@@ -5678,11 +5683,6 @@ small {
       float: right; } }
 
 .tabs {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
   position: relative;
   height: 48px;
   background-color: #fff;
@@ -5690,10 +5690,6 @@ small {
   width: 100%;
   white-space: nowrap; }
   .tabs .tab {
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
     display: block;
     float: left;
     text-align: center;
@@ -6086,7 +6082,7 @@ a.waves-effect .waves-ripple {
 .collapsible-header {
   display: block;
   cursor: pointer;
-  min-height: 3rem;
+  height: 3rem;
   line-height: 3rem;
   padding: 0 1rem;
   background-color: #fff;
@@ -6316,11 +6312,11 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
     border: 0;
     box-shadow: none;
     color: #444; }
-    .input-field input[type=search]:focus + label i, .input-field input[type=search]:focus ~ .mdi-navigation-close, .input-field input[type=search]:focus ~ .material-icons {
+    .input-field input[type=search]:focus + label i, .input-field input[type=search]:focus ~ .mdi-navigation-close {
       color: #444; }
   .input-field input[type=search] + label {
     left: 1rem; }
-  .input-field input[type=search] ~ .mdi-navigation-close, .input-field input[type=search] ~ .material-icons {
+  .input-field input[type=search] ~ .mdi-navigation-close {
     position: absolute;
     top: 0;
     right: 1rem;
@@ -8141,125 +8137,3 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 @media (min-height: 40.125em) {
   .picker--time .picker__box {
     margin-bottom: 5em; } }
-
-body {
-  color: rgba(0, 0, 0, 0.87);
-  background: #f5f5f5; }
-
-.comment .comment-arrow {
-  border-color: #343434; }
-
-.l-container {
-  background: #fff; }
-
-.l-header ul.menu li a.active, .l-header ul.menu li.active-trail a {
-  background: #343434; }
-
-.tabs ul.primary li a.active {
-  background-color: #343434;
-  color: #E8E6E5; }
-
-.tabs ul.primary li.active a {
-  background-color: #343434;
-  border-bottom: 1px solid #343434; }
-
-a {
-  color: #4CAF50; }
-
-a:hover, a:focus {
-  color: #26a69a; }
-
-a:active {
-  color: #26a69a; }
-
-.l-sidebar .block {
-  background-color: #f6f6f2;
-  border-color: #f9f9f9; }
-
-.l-footer-wrapper, .l-footer {
-  background: #292929; }
-
-.l-footer-wrapper, .l-footer {
-  color: #343434; }
-
-.l-header a {
-  color: #000; }
-
-header .logo {
-  max-height: 64px;
-  max-width: 200px;
-  overflow: hidden;
-  float: left; }
-
-.l-header {
-  background-color: #fefefe;
-  color: #000000;
-  height: auto;
-  padding-top: 10px;
-  padding-bottom: 10px; }
-
-.block-system-header {
-  clear: none;
-  float: left; }
-
-.name-and-slogan {
-  float: left;
-  clear: none;
-  width: 33%; }
-
-.name-and-slogan h1, .name-and-slogan .site-name {
-  font-size: 4em;
-  line-height: normal;
-  margin: 0px;
-  clear: none;
-  float: left;
-  padding-left: 5px; }
-
-.block-system-main-menu {
-  line-height: 4;
-  float: right; }
-
-nav.header-menu {
-  float: left;
-  clear: none;
-  width: auto;
-  margin-left: 100px; }
-
-input[type="button"], button, input[type="reset"], input[type="submit"] {
-  background-color: transparent;
-  border: 0px solid; }
-
-i.form-submit {
-  margin-right: 10px; }
-
-.l-container {
-  margin-top: 20px;
-  margin-bottom: 40px; }
-
-.l-container, .l-triptych {
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto; }
-
-.l-container, .l-messages, .l-featured, .l-triptych, .l-footer-columns {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-article.comment footer.page-footer {
-  margin-top: 0px;
-  padding-top: 0px; }
-
-footer.l-footer.page-footer a, footer.link-wrapper.page-footer a {
-  color: #fefefe; }
-
-@media only screen and (max-width: 600px) {
-  nav.header-menu {
-    clear: both;
-    margin-left: 0px; }
-  .block-system-main-menu {
-    float: left;
-    clear: both; } }
