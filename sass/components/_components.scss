@@ -1,0 +1,98 @@
+/*
+ * Components
+ *
+ * Include all your design elements in this file.
+ * forms/buttons and non-general html elements
+ * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
+ * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
+ */
+@charset "UTF-8";
+
+/* Base responsive images */
+img {
+    height: auto;
+    max-width: 100%;
+    outline: 0;
+}
+
+header .logo img {
+    max-height: 64px;
+    max-width: 200px;
+    overflow: hidden;
+    float: left;
+}
+
+input[type="button"],
+button,
+input[type="reset"],
+input[type="submit"] {
+    background-color: transparent;
+    border: 0px solid;
+}
+
+.search-block-form .form-actions {
+    margin-top: -7px;
+}
+
+.block-search-form {
+    width: 250px;
+    float: left;
+}
+
+input[type=search], .form-search {
+    width: 100px;
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.search-block-form #edit-submit {
+    position: relative;
+    float: left;
+    margin-top: 15px;
+}
+
+i.form-submit {
+    margin-right: 10px;
+}
+
+ul.tabs.primary {
+    overflow: visible;
+    width: 100%;
+}
+
+.tabs {
+    display: block;
+}
+
+input[type="button"], input[type="reset"], input[type="submit"]:not(.waves-button-input), a.button {
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+    -ms-transition: .2s ease-out;
+    transition: .2s ease-out;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    outline: 0;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.webform-configure-form {
+    margin-top: 45px;
+}
+
+h2.block-title {
+    font-size: 2.56rem;
+}

@@ -1,39 +1,52 @@
 @charset "UTF-8";
+/**
+ * Style file
+ *
+ * This file is compiled into style.css
+
+@import "bourbon";
+@import "neat";
+ */
 
 // Mixins
-@import "components/prefixer";
-@import "components/mixins";
-@import "components/color";
+@import "helpers/prefixer";
+@import "helpers/mixins";
+@import "helpers/color";
 
 // Variables;
-@import "components/variables";
+@import "helpers/variables";
 
 // Reset
-@import "components/normalize";
+// @import "base/normalize";
 
 // components
-@import "components/global";
-@import "components/icons-material-design";
-@import "components/grid";
-@import "components/navbar";
-@import "components/roboto";
-@import "components/typography";
-@import "components/cards";
-@import "components/toast";
-@import "components/tabs";
-@import "components/tooltip";
-@import "components/buttons";
-@import "components/dropdown";
-@import "components/waves";
-@import "components/modal";
-@import "components/collapsible";
-@import "components/materialbox";
-@import "components/form";
-@import "components/table_of_contents";
-@import "components/sideNav";
-@import "components/preloader";
-@import "components/slider";
-@import "components/date_picker/default.scss";
-@import "components/date_picker/default.date.scss";
-@import "components/date_picker/default.time.scss";
-@import "components/custom";
+@import "materialize_lib/global";
+@import "base/roboto";
+@import "base/typography";
+@import "materialize_lib/icons-material-design";
+@import "materialize_lib/grid";
+@import "materialize_lib/navbar";
+@import "materialize_lib/cards";
+@import "materialize_lib/toast";
+@import "materialize_lib/tabs";
+@import "materialize_lib/tooltip";
+@import "materialize_lib/buttons";
+@import "materialize_lib/dropdown";
+@import "materialize_lib/waves";
+@import "materialize_lib/modal";
+@import "materialize_lib/collapsible";
+@import "materialize_lib/materialbox";
+@import "materialize_lib/form";
+@import "materialize_lib/table_of_contents";
+@import "materialize_lib/sideNav";
+@import "materialize_lib/preloader";
+@import "materialize_lib/slider";
+@import "materialize_lib/date_picker/default.scss";
+@import "materialize_lib/date_picker/default.date.scss";
+@import "materialize_lib/date_picker/default.time.scss";
+
+/* ---------- Import custom styles ---------- */
+@import "components/layout";
+@import "components/navigation";
+@import "components/components";
+@import "components/colors";

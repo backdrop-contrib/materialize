@@ -1,0 +1,112 @@
+/*
+ * Colours
+ *
+ * Colours go in this file
+ * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
+ * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
+*/
+@charset "UTF-8";
+
+body {
+    color: $off-black;
+    background: $background-color;
+}
+
+a {
+    color: $success-color;
+}
+
+a:hover,
+a:focus {
+    color: $secondary-color;
+}
+
+a:active {
+    color: $secondary-color;
+}
+
+a.button:focus, a.button:hover {
+    background-color: #2bbbad;
+    color: $white;
+}
+
+input[type="button"], input[type="reset"], input[type="submit"]:not(.waves-button-input), a.button {
+    background-color: $secondary-color;
+    color: $white;
+}
+
+tr.even {
+    background-color: $lightgrey;
+}
+
+.comment .comment-arrow {
+    border-color: $button-color-flat;
+}
+
+.l-container {
+    background: $white;
+}
+
+.l-header ul.menu li a.active,
+.l-header ul.menu li.active-trail a {
+    background: $button-color-flat;
+}
+
+.tabs ul.primary li a.active {
+    background-color: $button-color-flat;
+    color: #E8E6E5;
+}
+
+.tabs ul.primary li.active a {
+    background-color: $button-color-flat;
+    border-bottom: 1px solid $button-color-flat;
+}
+
+.l-header a {
+    color: $black;
+}
+
+.l-header {
+    background-color: $lightgrey;
+    color: $black;
+}
+
+.l-header .responsive-menus-mean-menu-processed ul.menu li a.active, .l-header .responsive-menus-mean-menu-processed ul.menu li.active-trail a,
+.l-header .responsive-menus-mean-menu-processed ul.menu li a.active, .l-header .responsive-menus-mean-menu-processed ul.menu li.active-trail a,
+.l-header .responsive-menus-sidr-processed ul.menu li a.active, .l-header .responsive-menus-sidr-processed ul.menu li.active-trail a {
+    background: #a6a7a2 !important;
+}
+
+.l-header .responsive-menus-mean-menu-processed ul.menu li.active, .l-header .responsive-menus-mean-menu-processed ul.menu li.active-trail,
+.l-header .responsive-menus-mean-menu-processed ul.menu li.active, .l-header .responsive-menus-mean-menu-processed ul.menu li.active-trail,
+.l-header .responsive-menus-sidr-processed ul.menu li.active, .l-header .responsive-menus-sidr-processed ul.menu li.active-trail {
+    background: #a6a7a2 !important;
+}
+
+.block-system-main-menu .responsive-menus ul.menu, .responsive-menus-mean-menu-processed ul.menu, .responsive-menus-sidr-processed ul.menu {
+    box-shadow: none !important;
+}
+
+.mean-container .mean-nav ul li {
+    background-color: #0c1923;
+}
+
+.l-sidebar .block {
+    background-color: #f6f6f2;
+    border-color: #f9f9f9;
+}
+
+.l-footer-wrapper,
+.l-footer {
+    background: #292929;
+}
+
+.l-footer-wrapper,
+.l-footer {
+    color: $button-color-flat;
+}
+
+footer.l-footer.page-footer a,
+footer.link-wrapper.page-footer a {
+    color: $lightgrey;
+}

@@ -1,18 +1,5 @@
 <?php
 
-/*
- * Initialize theme settings
- */
-// if (is_null(theme_get_setting('materialize_script1'))) {
-  // Save default theme settings.
-//   config_set('materialize.settings', 'materialize_script1', '');
-
-  // Force refresh of Backdrop internals.
-//   theme_get_setting('', TRUE);
-// }
-
-
-
 /**
  * Implements hook_preprocess_maintenance_page().
  */
@@ -67,12 +54,11 @@ $form['actions']['preview']['#attributes']['class'][] = 'waves-light';
 $form['actions']['preview']['#attributes']['class'][] = 'btn-large';
 }
 
-
 /**
  * Implements theme_menu_tree().
  */
 function materialize_menu_tree($variables) {
-return '<a class="dropdown-button btn" href="#" data-activates="dropdown1">Menu</a><ul id="dropdown1" class="menu dropdown-content clearfix">' . $variables['tree'] . '</ul>';
+return '<a class="dropdown-button btn" href="#">Menu</a><ul class="menu dropdown-content clearfix">' . $variables['tree'] . '</ul>';
 }
 
 function materialize_select($variables) {
@@ -103,20 +89,34 @@ return theme('image', $variables);
 
 function materialize_breadcrumb($variables) {
 
-if (theme_get_setting('materialize_cdn') > 0)
+if (theme_get_setting('materialize_cdn_css') > 0)
 {
 backdrop_add_css('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css', array('every_page' => TRUE, 'preprocess' => TRUE));
-backdrop_add_css('themes/materialize/css/style.css', array('every_page' => TRUE, 'preprocess' => TRUE));
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-backdrop_add_js("themes/materialize/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 else
 {
-backdrop_add_css("themes/materialize/css/style.css", array('every_page' => TRUE, 'preprocess' => TRUE));
-backdrop_add_js("themes/materialize/js/materialize.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-backdrop_add_js("themes/materialize/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+
 }
 
+backdrop_add_css('themes/materialize/css/style.css', array('every_page' => TRUE, 'preprocess' => TRUE));
+
+if (theme_get_setting('materialize_dropdown') > 0)
+{
+backdrop_add_js("themes/materialize/js/dropdown_init.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+else
+{
+
+}
+
+if (theme_get_setting('materialize_cdn_js') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+else
+{
+// backdrop_add_js("themes/materialize/js/materialize.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("themes/materialize/js/global.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 
 if (theme_get_setting('materialize_script1') > 0)
 {
@@ -262,7 +262,9 @@ if (theme_get_setting('materialize_script29') > 0)
 {
 backdrop_add_js("themes/materialize/js/materialize_custom.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
+}
 
+backdrop_add_js("themes/materialize/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 backdrop_add_js("document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')", array('type' => 'inline', 'scope' => 'footer', 'weight' => 9999));
 
 }

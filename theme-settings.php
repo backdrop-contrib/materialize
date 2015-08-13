@@ -11,14 +11,26 @@ if (isset($form_id)) {
    return;
   }
 
-$form['materialize_cdn'] = array(
+$form['materialize_dropdown'] = array(
     '#type'          => 'checkbox',
-    '#title'         => t('<b>Use Cloudflare CDN</b> instead of this website to serve the base CSS and Javascript files.  If you are using SASS, you will have to manually adjust your imports to avoid loading the same styles twice.'),
-    '#default_value' => theme_get_setting('materialize_cdn', 'materialize'),
+    '#title'         => t('<b>Use a drowdown menu for the main menu</b> to load scripts which make your main menu into a Materialize menu.  <br>Uncheck</b> to leave your main menu as the default or use your own menu module.'),
+    '#default_value' => theme_get_setting('materialize_dropdown', 'materialize'),
+  );  
+  
+$form['materialize_cdn_css'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('<b>Use Cloudflare CDN</b> to serve the Materialize CSS as one minified CSS file.  <br>Uncheck</b> to serve the CSS from your web server.  Checking this will produce duplicate CSS for your website unless you are doing some tricky CSS configuration.'),
+    '#default_value' => theme_get_setting('materialize_cdn_css', 'materialize'),
   );
 
+$form['materialize_cdn_js'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Novice mode: <b>Use Cloudflare CDN</b> instead of this website to serve the whole Materialize library as one minified Javascript file. <br>Uncheck</b> to serve the JS files from your web server.'),
+    '#default_value' => theme_get_setting('materialize_cdn_js', 'materialize'),
+  );  
+  
 $form['disclaimer'] = array(
-  '#markup' => '<p>' . t('You may choose to include these Javascript files into your page to help enable these certain components.  WARNING: some of the components may rely on multiple scripts, and you are responsible for adding the theme template functions to utilize these functionalities.  If you do not need these functionalities for this website, you may leave each unchecked.') . '</p>',
+  '#markup' => '<p>' . t('Advanced mode: Uncheck above and selectively check below to only include these certain Javascript files if you only need certain components.  WARNING: some of the components may rely on multiple scripts, and you are responsible for adding the theme template functions to utilize these functionalities.  If you do not need these functionalities for this website, you may leave each unchecked.') . '</p>',
 );
 
 $form['materialize_script1'] = array(
