@@ -1,31 +1,5 @@
 MATERIALIZE
------------
-
-Materialize is a "pretty" theme for something nice for websites out of the box.
-It is pretty heavy and may not be a good, plain base theme.  It uses:
-
-- default Backdrop layouts
-- Materialize CSS framework based on Google Material Design for that Android/GMail look
-
-- a single CSS file for casual web developers OR
-- SASS stylesheets using libSASS and Grunt for workflow
-
-- settings page for serve local style/script files OR
-- serve style/script files from Cloudflare CDN
-
-- settings page to manually select which Javascript files/components you want to use OR
-- you can dig into the code to use .info files and SASS imports instead
-
-- a mobile-friendly menu built in
-
-- custom CSS form elements for easier mobile usage
-
-- through SASS and grunt watch, this theme enables LiveReload which automatically refreshes the page you are working on whenever you make a CSS, SASS or Javascript alteration and save.  It is basically the same speed of development as directly typing CSS declarations into the browser using something like Firebug or Devtools.
-
-- (disabled by default/not tested yet) Bourbon SASS mixins
-- (disabled by default/not tested yet) the Color module UI for changing theme colors
-
-"Created and designed by Google, Material Design is a design language that combines the classic principles of successful design along with innovation and technology."  Implemented by a team of students from Carnegie Mellon University.
+===========
 
 CONTENTS OF THIS FILE
 ---------------------
@@ -47,14 +21,42 @@ CONTENTS OF THIS FILE
  - Credits
  - Maintainers
 
+INTRODUCTION
+------------
+
+Materialize is a "pretty" theme for something nice for websites out of the box.
+It is pretty heavy and may not be a good, plain base theme.  It uses:
+
+- default Backdrop layouts
+- Materialize CSS framework based on Google Material Design for that Android/GMail look
+
+- a single CSS file for casual web developers OR
+- SASS stylesheets using libSASS and Grunt for workflow
+
+- settings page for serve local style/script files OR
+- serve style/script files from Cloudflare CDN
+
+- settings page to manually select which Javascript files/components you want to use OR
+- you can dig into the code to use .info files and SASS imports instead
+
+- a mobile-friendly menu built in
+- custom CSS form elements for easier mobile usage
+- through SASS and grunt watch, this theme enables LiveReload which automatically refreshes the page you are working on whenever you
+make a CSS, SASS or Javascript alteration and save.  It is basically the same speed of development as directly typing CSS declarations into the browser using something like Firebug or Devtools.
+
+- (disabled by default/not tested yet) Bourbon SASS mixins
+- (disabled by default/not tested yet) the Color module UI for changing theme colors
+
+"Created and designed by Google, Material Design is a design language that combines the classic principles of successful design along with innovation and technology."  Implemented by a team of students from Carnegie Mellon University.
+
 TESTED
 -----
 
 @todo
-This theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop with the Mobile Navigation, Webform and Responsive Menus modules.
+This theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop.
 
 KNOWN ISSUES
-------------
+---------------------
 
 NOTE -- this theme is in a heavy development state.  If you have spare time and shared ideas on how to propel it forward coding cleanly and under the appropriate licenses, you are welcome to join in and offer advice or build it together.
 
@@ -133,9 +135,13 @@ Overall file structure
 - config.rb contains settings if you are using SASS Compass
 - Gruntfile.js and package.json contain settings if you are using SASS Grunt
 
-We are in the process of converting from random code from different places into follwowing:
-http://www.sitepoint.com/architecture-sass-project/
-http://sass-guidelin.es/
+SASS file structure
+
+Here is the default layout of SASS partial files in this theme.
+COMPONENTS folder
+_custom.scss
+-- custom.scss contains the custom code on top of your SASS theme
+
 
 
 SASS
@@ -161,21 +167,22 @@ to install the SASS tools for this theme.
 After this has installed, use these commands on the command line in the root of your theme to make the theme do its thing:
 
 Grunt tasks
-------------
+===========
 - grunt sass
 
 compile the sass files
 
 - grunt watch
 
-start a watch and livereload session for the theme
+start a watch and livereload session for the xtheme
 
 - grunt prod
 
 compile the theme for production
 
 Compass compile
----------------
+===========
+
 You can also compile this theme with compass or ruby just install the following gems
 
 gem install sass

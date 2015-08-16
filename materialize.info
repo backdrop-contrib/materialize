@@ -8,7 +8,7 @@ version = 1.x-1.1
 ; stylesheets[print][] = css/print.css
 
 ; scripts[] = js/materialize.min.js
-
+; scripts[] = js/scripts.js
 ; scripts[] = js/animation.js
 ; scripts[] = js/buttons.js
 ; scripts[] = js/cards.js
@@ -20,7 +20,6 @@ version = 1.x-1.1
 ; scripts[] = js/dropdown.js
 
 ; scripts[] = js/forms.js
-; scripts[] = js/global.js
 ; scripts[] = js/hammer.min.js
 ; scripts[] = js/jquery.easing.1.3.js
 ; scripts[] = js/jquery.hammer.js
@@ -46,10 +45,6 @@ version = 1.x-1.1
 ; scripts[] = js/waves.js
 
 ; scripts[] = js/materialize_custom.js
-; scripts[] = js/dropdown_init.js
-; scripts[] = js/scripts.js
-
-
 breakpoints[all] = (min-width: 0em)
 breakpoints[small] = (min-width: 35em)
 breakpoints[large] = (min-width: 55em)

@@ -8263,6 +8263,9 @@ input[type="button"], input[type="reset"], input[type="submit"]:not(.waves-butto
   -webkit-tap-highlight-color: transparent;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
+li.admin-bar-search .form-search {
+  height: initial; }
+
 .webform-configure-form {
   margin-top: 45px; }
 
