@@ -1,31 +1,8 @@
 MATERIALIZE
-===========
-
-CONTENTS OF THIS FILE
 ---------------------
 
- - Introduction
- - Tested
- - Known Issues
- - Special Thanks
- - Requirements
- - Installation
- - Coming From Drupal?
- - Casual Usage
- - Advanced Usage
- - File Structure
- - Usage
- - SASS
- - Questions
- - License
- - Credits
- - Maintainers
-
-INTRODUCTION
-------------
-
 Materialize is a "pretty" theme for something nice for websites out of the box.
-It is pretty heavy and may not be a good, plain base theme.  It uses:
+It is pretty heavy and may not be a good base theme.  It uses:
 
 - default Backdrop layouts
 - Materialize CSS framework based on Google Material Design for that Android/GMail look
@@ -48,6 +25,26 @@ make a CSS, SASS or Javascript alteration and save.  It is basically the same sp
 - (disabled by default/not tested yet) the Color module UI for changing theme colors
 
 "Created and designed by Google, Material Design is a design language that combines the classic principles of successful design along with innovation and technology."  Implemented by a team of students from Carnegie Mellon University.
+
+CONTENTS OF THIS FILE
+---------------------
+
+ - Introduction
+ - Tested
+ - Known Issues
+ - Special Thanks
+ - Requirements
+ - Installation
+ - Coming From Drupal?
+ - Casual Usage
+ - Advanced Usage
+ - File Structure
+ - Usage
+ - SASS
+ - Questions
+ - License
+ - Credits
+ - Maintainers
 
 TESTED
 -----
@@ -137,11 +134,9 @@ Overall file structure
 
 SASS file structure
 
-Here is the default layout of SASS partial files in this theme.
-COMPONENTS folder
-_custom.scss
--- custom.scss contains the custom code on top of your SASS theme
-
+We are in the process of converting from random code from different places into follwowing:
+<http://www.sitepoint.com/architecture-sass-project/>
+<http://sass-guidelin.es/>
 
 
 SASS
@@ -167,7 +162,7 @@ to install the SASS tools for this theme.
 After this has installed, use these commands on the command line in the root of your theme to make the theme do its thing:
 
 Grunt tasks
-===========
+---------------------
 - grunt sass
 
 compile the sass files
@@ -181,7 +176,7 @@ start a watch and livereload session for the xtheme
 compile the theme for production
 
 Compass compile
-===========
+---------------------
 
 You can also compile this theme with compass or ruby just install the following gems
 
