@@ -1,25 +1,25 @@
 MATERIALIZE
 ---------------------
 
-Materialize is a "pretty" theme for something nice for websites out of the box.
-It is pretty heavy and may not be a good base theme.  It uses:
+Materialize is a "pretty" theme that's great for websites out of the box.
+It is fairly heavy and may not be good as a base theme.
 
 - default Backdrop layouts
-- Materialize CSS framework based on Google Material Design for that Android/GMail look
+- Materialize CSS framework is based on Google Material Design for that Android, Gmail feel
 
 - a single CSS file for casual web developers OR
 - SASS stylesheets using libSASS and Grunt for workflow
 
-- settings page for serve local style/script files OR
-- serve style/script files from Cloudflare CDN
+- settings page to serve local styles/scripts OR
+- serve styles/script from Cloudflare CDN
 
-- settings page to manually select which Javascript files/components you want to use OR
-- you can dig into the code to use .info files and SASS imports instead
+- settings page to manually select which Javascript files/components to use OR
+- you can dig into the code to use .info files with SASS imports instead
 
-- a mobile-friendly menu built in
+- a mobile-friendly menu built-in
 - custom CSS form elements for easier mobile usage
-- through SASS and grunt watch, this theme enables LiveReload which automatically refreshes the page you are working on whenever you
-make a CSS, SASS or Javascript alteration and save.  It is basically the same speed of development as directly typing CSS declarations into the browser using something like Firebug or Devtools.
+- SASS with grunt-watch enables LiveReload to automatically refresh pages whenever you make a
+save to CSS, SASS or JavaScript files. Speed of development is comparable with directly typing CSS declarations into tools such as Firebug or Devtools
 
 - (disabled by default/not tested yet) Bourbon SASS mixins
 - (disabled by default/not tested yet) the Color module UI for changing theme colors
@@ -50,16 +50,16 @@ TESTED
 -----
 
 @todo
-This theme has been manually tested successfully creating and viewing nodes and style guide in Backdrop.
+This theme has been successfully manually tested by creating/viewing nodes and style guides.
 
 KNOWN ISSUES
 ---------------------
 
 NOTE -- this theme is in a heavy development state.  If you have spare time and shared ideas on how to propel it forward coding cleanly and under the appropriate licenses, you are welcome to join in and offer advice or build it together.
 
-This theme works as is by just installing it.
+Materialize works as is by simply installing it.
 
-This theme is in the process of retro-fitting its CSS into SASS.
+Materialize is in the process of retro-fitting its CSS into SASS.
 
 This theme has a lot of functionality and widget type add-ons bundled in that are not actively integrated yet.
 You can look through the folders and manually integrate what you need, or delete what you don't.
