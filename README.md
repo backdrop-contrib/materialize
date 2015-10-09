@@ -11,7 +11,7 @@ It is fairly heavy and may not be good as a base theme.
 - SASS stylesheets using libSASS and Grunt for workflow
 
 - settings page to serve local styles/scripts OR
-- serve styles/script from Cloudflare CDN
+- serve styles/scripts from Cloudflare CDN
 
 - settings page to manually select which Javascript files/components to use OR
 - you can dig into the code to use .info files with SASS imports instead
