@@ -1,7 +1,7 @@
 MATERIALIZE
 ---------------------
 
-Materialize is a "pretty" theme that's great for websites out of the box.
+A "pretty" theme that's great for websites out of the box.
 It is fairly heavy and may not be good as a base theme.
 
 ## Features
