@@ -4,6 +4,8 @@ MATERIALIZE
 Materialize is a "pretty" theme that's great for websites out of the box.
 It is fairly heavy and may not be good as a base theme.
 
+## Features
+
 - default Backdrop layouts
 - Materialize CSS framework is based on Google Material Design for that Android, Gmail feel
 
