@@ -15,8 +15,8 @@ $form['materialize_dropdown'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('<b>Use a drowdown menu for the main menu</b> to load scripts which make your main menu into a Materialize menu.  <br>Uncheck</b> to leave your main menu as the default or use your own menu module.'),
     '#default_value' => theme_get_setting('materialize_dropdown', 'materialize'),
-  );  
-  
+  );
+
 $form['materialize_cdn_css'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('<b>Use Cloudflare CDN</b> to serve the Materialize CSS as one minified CSS file.  <br>Uncheck</b> to serve the CSS from your web server.  Checking this will produce duplicate CSS for your website unless you are doing some tricky CSS configuration.'),
@@ -27,8 +27,8 @@ $form['materialize_cdn_js'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Novice mode: <b>Use Cloudflare CDN</b> instead of this website to serve the whole Materialize library as one minified Javascript file. <br>Uncheck</b> to serve the JS files from your web server.'),
     '#default_value' => theme_get_setting('materialize_cdn_js', 'materialize'),
-  );  
-  
+  );
+
 $form['disclaimer'] = array(
   '#markup' => '<p>' . t('Advanced mode: Uncheck above and selectively check below to only include these certain Javascript files if you only need certain components.  WARNING: some of the components may rely on multiple scripts, and you are responsible for adding the theme template functions to utilize these functionalities.  If you do not need these functionalities for this website, you may leave each unchecked.') . '</p>',
 );
@@ -205,6 +205,54 @@ $form['materialize_script29'] = array(
       '#type' => 'checkbox',
       '#title' => t('Load script materialize_custom.js for an example of some sample webpage effects'),
       '#default_value' => theme_get_setting('materialize_script29', 'materialize'),
+    );
+
+$form['materialize_juiced_main_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the main page area when you are using a Juiced layout'),
+      '#default_value' => theme_get_setting('materialize_juiced_main_background', 'materialize'),
+    );
+
+$form['materialize_juiced_main_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('materialize_juiced_main_background_blurred', 'materialize'),
+    );
+
+$form['materialize_juiced_big_statement_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the big statement page area when you are using a Juiced layout'),
+      '#default_value' => theme_get_setting('materialize_juiced_big_statement_background', 'materialize'),
+    );
+
+$form['materialize_juiced_big_statement_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('materialize_juiced_big_statement_background_blurred', 'materialize'),
+    );
+
+$form['materialize_body_main_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the main page area in a core layout.'),
+      '#default_value' => theme_get_setting('materialize_body_main_background', 'materialize'),
+    );
+
+$form['materialize_body_main_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('materialize_body_main_background_blurred', 'materialize'),
+    );
+
+$form['materialize_footer_main_background'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Enter the URL to your desired background image for the footer area in a core layout.'),
+      '#default_value' => theme_get_setting('materialize_footer_main_background', 'materialize'),
+    );
+
+$form['materialize_footer_main_background_blurred'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Blur this background'),
+      '#default_value' => theme_get_setting('materialize_footer_main_background_blurred', 'materialize'),
     );
 
 }

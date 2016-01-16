@@ -8038,7 +8038,7 @@ div.admin-panel .description {
 .site-name {
   margin-top: 5px; }
 
-.block-system-main-menu {
+.l-header .block-system-main-menu {
   line-height: 4;
   float: right; }
 
@@ -8070,27 +8070,13 @@ nav.header-menu {
 .responsive-menus ul.menu li, .responsive-menus-mean-menu-processed ul.menu li, .responsive-menus-sidr-processed ul.menu li {
   margin: 0 !important; }
 
-@media only screen and (max-width: 600px) {
-  nav.header-menu {
-    margin-left: 5px; }
-  .block-system-main-menu {
-    float: left;
-    clear: both; } }
-
-@media only screen and (max-width: 768px) {
-  .name-and-slogan, .mobile-menu-basic .dropdown-button, .mobile-menu-accordion .dropdown-button, .mean-nav .dropdown-button, .mean-nav .block-title, .sidr-class-dropdown-button {
-    display: none !important; }
-  #mobile-menu-wrapper, .dl-menuwrapper .dl-menu {
-    width: 310px !important; }
-  body.responsive-menus-load-processed .block-system-main-menu {
-    width: 100%; } }
+.responsive-menus-load-processed .l-header ul.menu li a.active, .responsive-menus-load-processed .l-header ul.menu li.active-trail a {
+  background-color: transparent; }
 
 /* ------------------ Footer ------------------ */
-.l-footer-columns, .l-footer {
-  font-size: 0.857em; }
-
-.l-footer-columns a:hover, .l-footer-columns a:focus, .l-footer a:hover, .l-footer a:focus {
-  text-decoration: underline; }
+.l-footer {
+  padding: 30px;
+  text-align: center; }
 
 .l-footer-columns .block, .l-footer .block {
   margin: 0.5em auto;
@@ -8129,22 +8115,6 @@ nav.header-menu {
   margin: 0;
   padding: 0; }
 
-.l-footer-columns li a, .l-footer li a {
-  display: block;
-  line-height: 1.2;
-  padding: 0.8em 2px 0.8em 20px;
-  /* LTR */
-  text-indent: -15px; }
-
-[dir="rtl"] .l-footer-columns li a, [dir="rtl"] .l-footer li a {
-  padding: 0.8em 20px 0.8em 2px; }
-
-.l-footer-columns li a:hover, .l-footer-columns li a:focus, .l-footer li a:hover, .l-footer li a:focus {
-  text-decoration: none; }
-
-.l-footer {
-  padding: 35px 0 30px; }
-
 .l-footer .section {
   letter-spacing: 0.2;
   padding-top: 30px; }
@@ -8161,10 +8131,10 @@ nav.header-menu {
   padding: 0; }
 
 .l-footer .menu li a {
-  float: left;
-  /* LTR */
-  padding: 0 12px;
-  display: block; }
+  display: block;
+  width: 100%;
+  clear: both;
+  padding-bottom: 1em; }
 
 [dir="rtl"] .l-footer .menu li a {
   float: right; }
@@ -8187,6 +8157,21 @@ nav.header-menu {
   padding-left: 0;
   padding-right: 12px;
   border-left: none; }
+
+@media only screen and (max-width: 600px) {
+  nav.header-menu {
+    margin-left: 5px; }
+  .block-system-main-menu {
+    float: left;
+    clear: both; } }
+
+@media only screen and (max-width: 768px) {
+  .name-and-slogan, .mobile-menu-basic .dropdown-button, .mobile-menu-accordion .dropdown-button, .mean-nav .dropdown-button, .mean-nav .block-title, .sidr-class-dropdown-button {
+    display: none !important; }
+  #mobile-menu-wrapper, .dl-menuwrapper .dl-menu {
+    width: 310px !important; }
+  body.responsive-menus-load-processed .block-system-main-menu {
+    width: 100%; } }
 
 /*
  * Components
@@ -8234,12 +8219,19 @@ input[type=search], .form-search {
 i.form-submit {
   margin-right: 10px; }
 
-ul.tabs.primary {
-  overflow: visible;
-  width: 100%; }
+.l-content .tabs {
+  display: block;
+  clear: both; }
 
-.tabs {
-  display: block; }
+ul.tabs.primary, ul.tabs.secondary {
+  overflow: visible;
+  width: 100%;
+  height: 100%; }
+
+ul.secondary li {
+  display: block;
+  padding: 0 .6em 0 0;
+  float: left; }
 
 input[type="button"], input[type="reset"], input[type="submit"]:not(.waves-button-input), a.button {
   text-decoration: none;
@@ -8268,6 +8260,10 @@ li.admin-bar-search .form-search {
 
 .webform-configure-form {
   margin-top: 45px; }
+
+h1, h2 {
+  clear: both;
+  line-height: 160%; }
 
 h2.block-title {
   font-size: 2.56rem; }
@@ -8347,7 +8343,7 @@ tr.even {
   background: #292929; }
 
 .l-footer-wrapper, .l-footer {
-  color: #343434; }
+  color: #fafafa; }
 
 footer.l-footer.page-footer a, footer.link-wrapper.page-footer a {
   color: #fafafa; }
