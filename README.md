@@ -25,7 +25,7 @@ Materialize is a "pretty" theme for something nice for websites out of the box. 
 
 - this theme contains easy UI background-image settings for Juiced layouts.
 
-- Color module support is not active.
+- You can change your website colours from this theme's settings page using the Color module.  (Though it is actually faster/more accurate just to edit the style.css or Sass files).  To use this functionality, enable the Color module on your website. Edit your theme .info file to remove the semi-colons from the stylesheets[all][] lines.  Finally, visit your theme settings page, select your colours, and hit save.  Because this is not a priority for all sites and we only have so much time, if you see an error while using this feature please raise an issue on https://github.com/backdrop-contrib or @biolithic and we will get to fixing it.
 
 
 CONTENTS OF THIS FILE
