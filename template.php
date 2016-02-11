@@ -1,4 +1,9 @@
 <?php
+/**
+ * @file
+ * Materialize parent theme template functions
+ *
+*/
 
 /**
  * Implements hook_preprocess_maintenance_page().
@@ -14,6 +19,11 @@ function materialize_preprocess_layout(&$variables) {
   if ($variables['content']['header']) {
     $variables['content']['header'] = '<div class="l-header-inner">' . $variables['content']['header'] . '</div>';
   }
+
+if (theme_get_setting('materialize_cdn_css') > 0)
+{
+backdrop_add_css('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css', array('type' => 'external'));
+}
 
 $var1 = theme_get_setting('materialize_juiced_main_background');
 $var2 = theme_get_setting('materialize_juiced_big_statement_background');
@@ -66,29 +76,13 @@ if ($var6 && $var8 == 0)
 backdrop_add_css("@media screen and (min-width: 769px) { footer.l-footer { background: url($var6) no-repeat fixed; background-size: cover; background-position: center; } }", array('type' => 'inline'));
 }
 
-if (theme_get_setting('materialize_cdn_css') > 0)
-{
-backdrop_add_css('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css', array('every_page' => TRUE, 'preprocess' => TRUE));
-}
-else
-{
 
-}
 
-backdrop_add_css('themes/materialize/css/style.css', array('every_page' => TRUE, 'preprocess' => TRUE));
 
-if (theme_get_setting('materialize_dropdown') > 0)
-{
-backdrop_add_js("themes/materialize/js/dropdown_init.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-}
-else
-{
-
-}
 
 if (theme_get_setting('materialize_cdn_js') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 else
 {
@@ -140,19 +134,9 @@ if (theme_get_setting('materialize_script9') > 0)
 backdrop_add_js("themes/materialize/js/forms.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
-if (theme_get_setting('materialize_script10') > 0)
-{
-backdrop_add_js("themes/materialize/js/hammer.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-}
-
-if (theme_get_setting('materialize_script11') > 0)
-{
-backdrop_add_js("themes/materialize/js/jquery.easing.1.3.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-}
-
 if (theme_get_setting('materialize_script12') > 0)
 {
-backdrop_add_js("themes/materialize/js/jquery.hammer.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("themes/materialize/js/jquery.easing.1.3.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
 if (theme_get_setting('materialize_script13') > 0)
@@ -235,15 +219,61 @@ if (theme_get_setting('materialize_script28') > 0)
 backdrop_add_js("themes/materialize/js/waves.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 
+// backdrop_add_js("themes/materialize/js/init.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+
+if (theme_get_setting('materialize_script10') > 0)
+{
+backdrop_add_js("themes/materialize/js/hammer.min.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script11') > 0)
+{
+backdrop_add_js("themes/materialize/js/jquery.hammer.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script30') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script31') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+if (theme_get_setting('materialize_script32') > 0)
+{
+backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", array('type' => 'external', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+
+if (theme_get_setting('materialize_dropdown') > 0)
+{
+backdrop_add_js("themes/materialize/js/dropdown_init.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+}
+
+backdrop_add_js("themes/materialize/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+
 if (theme_get_setting('materialize_script29') > 0)
 {
 backdrop_add_js("themes/materialize/js/materialize_custom.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
+
+// backdrop_add_js("document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')", array('type' => 'inline', 'scope' => 'footer', 'weight' => 9999));
 }
 
-backdrop_add_js("themes/materialize/js/scripts.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
-// backdrop_add_js("document.write('<script src=\"http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1\"></' + 'script>')", array('type' => 'inline', 'scope' => 'footer', 'weight' => 9999));
 
+function materialize_css_alter(&$css) {
+  if (theme_get_setting('materialize_cdn_css') > 0)
+  {
+  $css_to_remove = array();
+  $css_to_remove[] = backdrop_get_path('theme','materialize') . '/css/materialize.css';
+    foreach ($css_to_remove as $index => $css_file) {
+      unset($css[$css_file]);
+    }
+  }
 }
 
 /**

@@ -7,6 +7,7 @@
   $(document).ready(function() {
     // run Javascript on page load here
 
+
     var window_width = $(window).width();
     // convert rgb to hex value string
     function rgb2hex(rgb) {

@@ -1,8 +1,9 @@
 <?php
 /**
  * @file
- * Theme settings file for Materialize.
- */
+ * Theme settings for Materialize parent theme
+ *
+*/
 
 
 function materialize_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL) {
@@ -11,22 +12,26 @@ if (isset($form_id)) {
    return;
   }
 
-$form['materialize_dropdown'] = array(
-    '#type'          => 'checkbox',
-    '#title'         => t('<b>Use a drowdown menu for the main menu</b> to load scripts which make your main menu into a Materialize menu.  <br>Uncheck</b> to leave your main menu as the default or use your own menu module.'),
-    '#default_value' => theme_get_setting('materialize_dropdown', 'materialize'),
-  );
+$form['disclaimer00'] = array(
+  '#markup' => '<p><strong>' . t('These settings for the parent theme do NOT extend into the subtheme.') . '</strong></p>',
+);
 
 $form['materialize_cdn_css'] = array(
     '#type'          => 'checkbox',
-    '#title'         => t('<b>Use Cloudflare CDN</b> to serve the Materialize CSS as one minified CSS file.  <br>Uncheck</b> to serve the CSS from your web server.  Checking this will produce duplicate CSS for your website unless you are doing some tricky CSS configuration.'),
+    '#title'         => t('<b>Use Cloudflare CDN</b> to serve the Materialize CSS as one minified CSS file.  <br>Uncheck</b> to serve the CSS from your web server.'),
     '#default_value' => theme_get_setting('materialize_cdn_css', 'materialize'),
   );
 
 $form['materialize_cdn_js'] = array(
     '#type'          => 'checkbox',
-    '#title'         => t('Novice mode: <b>Use Cloudflare CDN</b> instead of this website to serve the whole Materialize library as one minified Javascript file. <br>Uncheck</b> to serve the JS files from your web server.'),
+    '#title'         => t('Novice mode: <b>Use Cloudflare CDN</b> instead of this website to serve the whole Materialize library as one minified Javascript file. <br>Uncheck</b> to serve the individual JS files from your web server.'),
     '#default_value' => theme_get_setting('materialize_cdn_js', 'materialize'),
+  );
+
+$form['materialize_dropdown'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('<b>Use a drowdown menu for the main menu</b> to load scripts which make your main menu into a Materialize menu.  <br>Uncheck</b> to leave your main menu as the default or use your own menu module.'),
+    '#default_value' => theme_get_setting('materialize_dropdown', 'materialize'),
   );
 
 $form['disclaimer'] = array(
@@ -207,6 +212,24 @@ $form['materialize_script29'] = array(
       '#default_value' => theme_get_setting('materialize_script29', 'materialize'),
     );
 
+$form['materialize_script30'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Load script modernizr.js'),
+      '#default_value' => theme_get_setting('materialize_script30', 'materialize'),
+    );
+
+$form['materialize_script31'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Load script jquery-validate.js'),
+      '#default_value' => theme_get_setting('materialize_script31', 'materialize'),
+    );
+
+$form['materialize_script32'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Load script fastclick.js'),
+      '#default_value' => theme_get_setting('materialize_script32', 'materialize'),
+    );
+
 $form['materialize_juiced_main_background'] = array(
       '#type' => 'textarea',
       '#title' => t('Enter the URL to your desired background image for the main page area when you are using a Juiced layout'),
@@ -254,6 +277,10 @@ $form['materialize_footer_main_background_blurred'] = array(
       '#title' => t('Blur this background'),
       '#default_value' => theme_get_setting('materialize_footer_main_background_blurred', 'materialize'),
     );
+
+$form['recommended'] = array(
+  '#markup' => '<p>' . t('Looking for additional theme features?  You might find what you are looking in layouts or modules.  Some common items to add to your site might be:<br><a href="https://backdropcms.org/modules">Modules</a><br><a href="https://backdropcms.org/layouts">Layouts</a><br>Menus<br><a href="https://backdropcms.org/project/mobile_navigation">Mobile Navigation</a><br><a href="https://backdropcms.org/project/responsive_menus">Responsive Menus</a><br><a href="https://backdropcms.org/project/wpmenu">WPMenu</a><br>Widgets<br><a href="https://backdropcms.org/project/google_fonts">Google Fonts</a><br><a href="https://backdropcms.org/project/back_to_top">Back To Top</a><br><a href="https://backdropcms.org/project/fanciblock">FanciBlock</a><br><a href="https://backdropcms.org/project/flexslider">FlexSlider</a><br>Parallax<br><a href="https://backdropcms.org/project/parallax_bg">Parallax_BG</a><br><a href="https://backdropcms.org/project/scrollreveal">Scroll Reveal</a><br><a href="https://backdropcms.org/project/void_menu">Void Menu</a> ') . '</p>',
+);
 
 }
 
