@@ -16,6 +16,7 @@ function materialize_preprocess_maintenance_page(&$variables) {
  * Implements hook_preprocess_layout().
  */
 function materialize_preprocess_layout(&$variables) {
+
   if ($variables['content']['header']) {
     $variables['content']['header'] = '<div class="l-header-inner">' . $variables['content']['header'] . '</div>';
   }
@@ -82,7 +83,8 @@ backdrop_add_css("@media screen and (min-width: 769px) { footer.l-footer { backg
 
 if (theme_get_setting('materialize_cdn_js') > 0)
 {
-backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+// backdrop_add_js("https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
+backdrop_add_js("themes/materialize/js/materialize.js", array('type' => 'file', 'scope' => 'footer', 'every_page' => TRUE, 'preprocess' => TRUE));
 }
 else
 {
@@ -318,7 +320,24 @@ $form['actions']['preview']['#attributes']['class'][] = 'btn-large';
  * Implements theme_menu_tree().
  */
 function materialize_menu_tree($variables) {
-return '<a class="dropdown-button btn" href="#">Menu</a><ul class="menu dropdown-content clearfix">' . $variables['tree'] . '</ul>';
+return '<a class="dropdown-button btn" href="#">Menu</a><ul class="menu dropdown-content clearfix">' . $variables['tree'];
+}
+
+/**
+ * Implements theme_menu_link().
+ */
+function materialize_menu_link($variables) {
+$element = $variables['element'];
+  $sub_menu = '';
+
+  $element['#attributes']['class'][] = '' . $element['#original_link']['mlid'];
+
+  if ($element['#below']) {
+    $sub_menu = backdrop_render($element['#below']);
+  }
+
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . backdrop_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
 function materialize_select($variables) {

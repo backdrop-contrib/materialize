@@ -7,7 +7,6 @@
   $(document).ready(function() {
     // run Javascript on page load here
 
-
     var window_width = $(window).width();
     // convert rgb to hex value string
     function rgb2hex(rgb) {
@@ -107,13 +106,13 @@
     jQuery(window).scroll(function() {
       var win = jQuery(this);
 
-      if (window_width > 480) {
-        if (win.scrollTop() > 110) {
-          $("header.l-header").css("position", "fixed").css("top", "0px");
-        } else {
-          $("header.l-header").css("position", "static").css("top", "auto");
-        }
-      }
+     // if (window_width > 480) {
+     //   if (win.scrollTop() > 200) {
+     //     $("header.l-header").css("position", "fixed").css("top", "0px");
+     //   } else {
+     //     $("header.l-header").css("position", "static").css("top", "auto");
+     //   }
+     // }
     });
 
 

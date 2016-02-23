@@ -1090,7 +1090,8 @@ $(document).ready(function(){
     };
 }( jQuery ));;(function ($) {
 
-  var methods = {
+var methods = {};
+  /*var methods = {
     init : function() {
       return this.each(function() {
 
@@ -1109,6 +1110,8 @@ $(document).ready(function(){
           $tabs_width = $this.width(),
           $tab_width = $this.find('li').first().outerWidth(),
           $index = 0;
+}
+}
 
       // If the location.hash matches one of the links, use that as the active tab.
       $active = $($links.filter('[href="'+location.hash+'"]'));
@@ -1220,7 +1223,7 @@ $(document).ready(function(){
 
   $(document).ready(function(){
     $('ul.tabs').tabs();
-  });
+  });*/
 }( jQuery ));
 ;(function ($) {
     $.fn.tooltip = function (options) {
@@ -2346,9 +2349,9 @@ $(document).ready(function(){
 		    var offset = $(this.hash).offset().top + 1;
 
 //          offset - 200 allows elements near bottom of page to scroll
-			
+
 	    	$('html, body').animate({ scrollTop: offset - 200 }, {duration: 400, queue: false, easing: 'easeOutCubic'});
-			
+
 		  });
 		});
 		options = options || {

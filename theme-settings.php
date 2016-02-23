@@ -24,7 +24,7 @@ $form['materialize_cdn_css'] = array(
 
 $form['materialize_cdn_js'] = array(
     '#type'          => 'checkbox',
-    '#title'         => t('Novice mode: <b>Use Cloudflare CDN</b> instead of this website to serve the whole Materialize library as one minified Javascript file. <br>Uncheck</b> to serve the individual JS files from your web server.'),
+    '#title'         => t('Novice mode: <b>serve the whole Materialize library as one minified Javascript file.</b> <br>Uncheck</b> to serve the individual JS files from your web server.'),
     '#default_value' => theme_get_setting('materialize_cdn_js', 'materialize'),
   );
 
