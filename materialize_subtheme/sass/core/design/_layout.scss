@@ -1,37 +1,8 @@
 /**
- * Layout
- *
  * All layout theming should go in this file
  * general html page elements and non-forms/buttons/footer/header
- * these defaults come from the Bartik theme
- * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
  */
 @charset "UTF-8" ;
-
-.l-container {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
-.l-container,
-.l-triptych {
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
-
-.l-container,
-.l-messages,
-.l-featured,
-.l-triptych,
-.l-footer-columns {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
 article.comment footer.page-footer {
   margin-top: 0px;
@@ -40,6 +11,10 @@ article.comment footer.page-footer {
 
 fieldset {
   padding: 1.2em;
+}
+
+.l-sidebar h2 {
+  margin-top: 0.2rem;
 }
 
 /* ------------------ Table Styles ------------------ */
@@ -110,6 +85,11 @@ tr.even .form-item {
 /* -------------- User Profile   -------------- */
 .profile .user-picture {
   float: none;
+}
+
+/* ----------------- Top ----------------- */
+.l-top {
+  clear: both;
 }
 
 /* -------------- Other Overrides ------------- */

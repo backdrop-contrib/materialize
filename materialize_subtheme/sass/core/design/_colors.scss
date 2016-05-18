@@ -1,9 +1,5 @@
 /*
- * Colours
- *
  * Colours go in this file
- * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
- * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
 */
 @charset "UTF-8" ;
 
@@ -52,7 +48,7 @@ tr.even {
   border-color: $button-color-flat;
 }
 
-.l-container {
+.l-wrapper {
   background: $white;
 }
 
@@ -83,6 +79,10 @@ ul li.leaf {
 .l-header {
   background-color: $lightgrey;
   color: $black;
+}
+
+nav ul li:hover, nav ul li.active {
+    background-color: initial;
 }
 
 .l-header .responsive-menus-mean-menu-processed ul.menu li a.active,

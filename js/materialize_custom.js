@@ -13,10 +13,10 @@
       $('.form-select').addClass('browser-default');
 
       if (screen.width > 599) {
-        $('.node.view-mode-teaser').addClass('card-panel hoverable');
+        $('.l-wrapper').addClass('card-panel hoverable');
       }
 
-      $('p').addClass('flow-text');
+      $('.node p').addClass('flow-text');
       $('footer').addClass('page-footer');
       $('input').addClass('validate');
     }

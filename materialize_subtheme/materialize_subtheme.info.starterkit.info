@@ -2,7 +2,7 @@ name = Materialize Subtheme
 description = A subtheme of a front-end theme for Backdrop CMS based on Materialize/Material UI from Google
 backdrop = 1.x
 type = theme
-version = 1.x-1.3
+version = 1.x-1.4
 base theme = materialize
 
 stylesheets[all][] = css/your-custom.css

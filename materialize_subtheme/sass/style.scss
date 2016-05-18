@@ -7,7 +7,7 @@
  * Comment the lines of the features you don't need on this website
  */
 
-@import "../node_modules/susy/sass/susy";
+/* @import "../node_modules/susy/sass/susy";
 @import "bourbon";
 @import "neat";
 
@@ -36,7 +36,7 @@ $susy: (
     clearfix: false,
     rem: true,
   )
-);
+); */
 
 @import "core/helpers/prefixer";
 
@@ -57,7 +57,7 @@ $susy: (
 @import "core/materialize_lib/roboto";
 @import "core/materialize_lib/global";
 @import "core/materialize_lib/icons-material-design";
-@import "core/materialize_lib/grid";
+// @import "core/materialize_lib/grid";
 @import "core/materialize_lib/navbar";
 @import "core/materialize_lib/cards";
 @import "core/materialize_lib/toast";

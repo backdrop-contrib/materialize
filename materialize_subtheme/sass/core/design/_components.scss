@@ -1,10 +1,5 @@
 /*
- * Components
- *
- * Include all your design elements in this file.
  * forms/buttons and non-general html elements
- * these defaults come from the Bartik theme and are being transitioned from CSS into SASS variables
- * Big thanks to Jen Simmons for these defaults https://www.drupal.org/u/jensimmons
  */
 @charset "UTF-8" ;
 
@@ -117,5 +112,5 @@ h2 {
 }
 
 h2.block-title {
-  font-size: 2.56rem;
+  font-size: 1.1rem;
 }
