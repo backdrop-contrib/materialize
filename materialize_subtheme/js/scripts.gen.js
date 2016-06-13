@@ -1,1 +1,0 @@
-!function(a,b,c,d){b.behaviors.teamwork_15_subtheme_dropdown={attach:function(){}},a(d).ready(function(){jQuery(c).scroll(function(){var b=jQuery(this);b.scrollTop()>30?a("html.admin-bar header.l-header").css("top","0px"):a("html.admin-bar header.l-header").css("top","32px")})})}(jQuery,Backdrop,this,this.document);

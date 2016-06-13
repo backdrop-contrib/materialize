@@ -7668,6 +7668,10 @@ article.comment footer.page-footer {
 fieldset {
   padding: 1.2em; }
 
+@media only screen and (min-width: 600px) {
+  .l-sidebar {
+    top: 50px; } }
+
 .l-sidebar h2 {
   margin-top: 0.2rem; }
 
@@ -7800,6 +7804,29 @@ div.admin-panel .description {
 @media screen and (max-width: 720px) {
   th.priority-low, td.priority-low {
     display: none; } }
+
+.container {
+  width: 100%; }
+
+@media screen and (max-width: 37.5625em) {
+  .admin-bar .layout--juiced-up-full-screen-bottom.layout {
+    margin-top: 30px !important; } }
+
+@media (min-width: 75em) {
+  .container.container-800 {
+    max-width: 800px; } }
+
+@media (min-width: 75em) {
+  .container.container-960 {
+    max-width: 960px; } }
+
+@media (min-width: 75em) {
+  .container.container-1200 {
+    max-width: 1200px; } }
+
+@media (min-width: 75em) {
+  .container.container-1440 {
+    max-width: 1440px; } }
 
 /**
  * Layout
@@ -7986,6 +8013,12 @@ nav.header-menu {
 .responsive-menus-load-processed .l-header ul.menu li a.active, .responsive-menus-load-processed .l-header ul.menu li.active-trail a {
   background-color: transparent; }
 
+html.admin-bar .layout--juiced-up-full-screen-left header.l-header {
+  top: 0px; }
+
+html.admin-bar .layout--juiced-up-full-screen-right header.l-header {
+  top: 0px; }
+
 /* ------------------ Footer ------------------ */
 .l-footer {
   padding: 30px;
@@ -8074,9 +8107,11 @@ nav.header-menu {
 @media only screen and (max-width: 600px) {
   nav.header-menu {
     margin-left: 5px; }
-  .block-system-main-menu {
+  .l-header .block-system-main-menu {
     float: left;
-    clear: both; } }
+    clear: both; }
+  #collapsed-menu-button {
+    margin-left: 0px; } }
 
 @media only screen and (max-width: 768px) {
   .name-and-slogan, .mobile-menu-basic .dropdown-button, .mobile-menu-accordion .dropdown-button, .mean-nav .dropdown-button, .mean-nav .block-title, .sidr-class-dropdown-button {
@@ -8085,6 +8120,10 @@ nav.header-menu {
     width: 310px !important; }
   body.responsive-menus-load-processed .block-system-main-menu {
     width: 100%; } }
+
+@media screen and (max-width: 37.5625em) {
+  .admin-bar .layout--juiced-up-full-screen-bottom.layout {
+    margin-top: 30px !important; } }
 
 /**
  * Navigation
@@ -8122,7 +8161,11 @@ tr.even {
   border-color: #343434; }
 
 .l-wrapper {
-  background: #FFFFFF; }
+  background-color: #FFFFFF; }
+
+.l-wrapper.juiced-main, .l-content.juiced-main {
+  background-color: transparent;
+  z-index: 1; }
 
 ul li.leaf {
   list-style-image: none;
@@ -8136,7 +8179,7 @@ ul li.leaf {
 
 .tabs ul.primary li a.active {
   background-color: #343434;
-  color: #E8E6E5; }
+  color: #e8e6e5; }
 
 .tabs ul.primary li.active a {
   background-color: #343434;

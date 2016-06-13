@@ -1,7 +1,7 @@
 /**
  * footer/header/main menu/navigation go in this file
  */
-@charset "UTF-8" ;
+@charset "utf-8";
 
 /* ------------------ Header ------------------ */
 #skip-link {
@@ -107,6 +107,14 @@ nav.header-menu {
 .responsive-menus-load-processed .l-header ul.menu li a.active,
 .responsive-menus-load-processed .l-header ul.menu li.active-trail a {
   background-color: transparent;
+}
+
+html.admin-bar .layout--juiced-up-full-screen-left header.l-header {
+  top: 0px;
+}
+
+html.admin-bar .layout--juiced-up-full-screen-right header.l-header {
+  top: 0px;
 }
 
 /* ------------------ Footer ------------------ */
@@ -230,9 +238,13 @@ nav.header-menu {
     margin-left: 5px;
   }
 
-  .block-system-main-menu {
+  .l-header .block-system-main-menu {
     float: left;
     clear: both;
+  }
+
+  #collapsed-menu-button {
+    margin-left: 0px;
   }
 }
 
@@ -253,5 +265,11 @@ nav.header-menu {
 
   body.responsive-menus-load-processed .block-system-main-menu {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 37.5625em) {
+  .admin-bar .layout--juiced-up-full-screen-bottom.layout {
+    margin-top: 30px !important;
   }
 }

@@ -1,7 +1,7 @@
 /*
  * Colours go in this file
 */
-@charset "UTF-8" ;
+@charset "utf-8";
 
 body {
   color: $off-black;
@@ -49,22 +49,33 @@ tr.even {
 }
 
 .l-wrapper {
-  background: $white;
+  background-color: $white;
+}
+
+.l-wrapper.juiced-main,
+.l-content.juiced-main {
+  background-color: transparent;
+  z-index: 1;
 }
 
 ul li.leaf {
   list-style-image: none;
-  list-style-type: none; }
+  list-style-type: none;
+}
 
-.l-header ul.menu li.active, .l-header ul.menu li.active-trail {
-  background: $white; }
+.l-header ul.menu li.active,
+.l-header ul.menu li.active-trail {
+  background: $white;
+}
 
-.l-header ul.menu.dropdown-content li a.active, .l-header ul.menu.dropdown-content li.active-trail a {
-  background: $button-color-flat; }
+.l-header ul.menu.dropdown-content li a.active,
+.l-header ul.menu.dropdown-content li.active-trail a {
+  background: $button-color-flat;
+}
 
 .tabs ul.primary li a.active {
   background-color: $button-color-flat;
-  color: #E8E6E5;
+  color: #e8e6e5;
 }
 
 .tabs ul.primary li.active a {
@@ -81,8 +92,9 @@ ul li.leaf {
   color: $black;
 }
 
-nav ul li:hover, nav ul li.active {
-    background-color: initial;
+nav ul li:hover,
+nav ul li.active {
+  background-color: initial;
 }
 
 .l-header .responsive-menus-mean-menu-processed ul.menu li a.active,

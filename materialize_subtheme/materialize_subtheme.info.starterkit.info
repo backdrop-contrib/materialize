@@ -9,7 +9,7 @@ stylesheets[all][] = css/your-custom.css
 ; stylesheets[all][] = css/colors.css
 ; stylesheets[print][] = css/print.css
 
-scripts[] = js/scripts.js
+; scripts[] = js/scripts.js
 breakpoints[all] = (min-width: 0em)
 breakpoints[small] = (min-width: 35em)
 breakpoints[large] = (min-width: 55em)
