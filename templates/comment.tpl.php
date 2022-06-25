@@ -18,6 +18,7 @@
  *   desired parameters on the $comment->changed variable.
  * - $new: New comment marker.
  * - $permalink: Comment permalink.
+ * - $permalink_path: Available to build your own permalink.
  * - $submitted: Submission information created from $author and $created during
  *   template_preprocess_comment().
  * - $picture: Authors picture.
@@ -25,12 +26,14 @@
  * - $status: Comment status. Possible values are:
  *   comment-unpublished, comment-published or comment-preview.
  * - $title: Linked title.
+ * - $title_options: Auto-generated(0), custom(1) or hidden(2).
  * - $classes: Array of classes that can be used to style contextually through
  *   CSS. The default values can be one or more of the following:
  *   - comment: The current template type, i.e., "theming hook".
  *   - comment-by-anonymous: Comment by an unregistered user.
  *   - comment-by-node-author: Comment by the author of the parent node.
  *   - comment-preview: When previewing a new or edited comment.
+ *   - hide-comment-title: Comment titles should be be hidden.
  *   The following applies only to viewers who are registered users:
  *   - comment-unpublished: An unpublished comment visible only to administrators.
  *   - comment-by-viewer: Comment by the user currently viewing the page.
@@ -72,9 +75,11 @@
       <span class="new"><?php print $new; ?></span>
     <?php endif; ?>
 
-    <?php print render($title_prefix); ?>
-    <h3><?php print $title; ?></h3>
-    <?php print render($title_suffix); ?>
+    <?php if ($title_options != '2'): ?>
+      <?php print render($title_prefix); ?>
+      <h3><?php print $title; ?></h3>
+      <?php print render($title_suffix); ?>
+    <?php endif; ?>
 
     <div class="content"<?php print backdrop_attributes($content_attributes); ?>>
       <?php
